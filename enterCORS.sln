@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "enterCORS", "enterCORS.csproj", "{6FD7A62F-B277-4CB4-8F3A-3C6356794C30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "enterCORS", "enterCORS.csproj", "{9CF4BC09-5C02-41ED-8DEF-D4ED92CE4E76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6FD7A62F-B277-4CB4-8F3A-3C6356794C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6FD7A62F-B277-4CB4-8F3A-3C6356794C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6FD7A62F-B277-4CB4-8F3A-3C6356794C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6FD7A62F-B277-4CB4-8F3A-3C6356794C30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CF4BC09-5C02-41ED-8DEF-D4ED92CE4E76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CF4BC09-5C02-41ED-8DEF-D4ED92CE4E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CF4BC09-5C02-41ED-8DEF-D4ED92CE4E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CF4BC09-5C02-41ED-8DEF-D4ED92CE4E76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {762AC89B-B0E6-47E4-85B3-7438CD4CF3F2}
+		SolutionGuid = {CCA1EDD9-F66D-49BC-8440-DC1E22A66475}
 	EndGlobalSection
 EndGlobal

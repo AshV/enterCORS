@@ -4,8 +4,7 @@
       "type": "appInsights.sdk"
     },
     "storage1": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/storageaccountashvebcdc",
-      "type": "storage.azure",
+      "type": "storage.emulator",
       "connectionId": "AzureWebJobsStorage"
     }
   }
