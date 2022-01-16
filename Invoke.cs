@@ -7,6 +7,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace enterCORS
 {
@@ -20,17 +21,25 @@ namespace enterCORS
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
-            string name = req.Query["name"];
+            if (req.Method.ToLowerInvariant().Equals("get"))
+            {
+                if (string.IsNullOrEmpty(url)) return new OkObjectResult("GET request is expecting a URL. Please refer documentation.");
 
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
+                if (!url.ToLowerInvariant().StartsWith("http")) url = "http://" + url;
 
-            string responseMessage = string.IsNullOrEmpty(name)
-                ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
-                : $"Hello, {name}. This HTTP triggered function executed successfully.";
+                Uri finalUri;
+                if (!Uri.TryCreate(url, UriKind.Absolute, out finalUri)) return new OkObjectResult($"URL {finalUri} doesn't seem proper, please verify.");
 
-            return new OkObjectResult(responseMessage);
+                var http = new HttpClient();
+                return new OkObjectResult(await http.GetStringAsync(finalUri));
+            }
+
+            if (req.Method.ToLowerInvariant().Equals("post"))
+            {
+            }
+
+            log.LogInformation("Execution Completed.");
+            return new OkObjectResult("Unsupported Request.");
         }
     }
 }
